@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- <meta name="google-signin-client_id" content="604776015172-64cfbf9ut2150manifu2u962imk923qe.apps.googleusercontent.com"> -->
+
+        <title>Document</title>
+
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./style.css" />
+
+        <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+    </head>
+    <body data-theme="dark">
+        <header>
+            <a href="./#/">
+                <h1>HV-ordbogen</h1>
+            </a>
+
+            <div>
+                <button id="theme">
+                    <span class="material-symbols-rounded">light_mode</span>
+                </button>
+                <!-- <button id="settings">
+                    <span class="material-symbols-rounded">settings</span>
+                </button>
+                <div class="modal" id="mini-settings">WHAT</div> -->
+                <button id="logout">
+                    <span class="material-symbols-rounded">logout</span>
+                </button>
+            </div>
+        </header>
+        <nav>
+            <div>
+                <a href="./#/">Hjem</a>
+                <a href="./#/opdag">Opdag</a>
+                <a href="./#/tilfældigt-ord">Tilfældigt ord</a>
+                <a href="./#/dagens-ord">Dagens ord</a>
+                <a href="./#/om">Om</a>
+                <a href="./#/favoritter">Favoritter</a>
+            </div>
+            <form onsubmit="return false;">
+                <div class="search">
+                    <span class="search-icon material-symbols-rounded">search</span>
+                    <input id="search" class="search-input" type="text" placeholder="Hv..." />
+                    <span class="material-symbols-rounded">close</span>
+                </div>
+            </form>
+        </nav>
+        <main id="root"></main>
+        <footer>
+            <p>&copy; <span id="copy-year"></span>, HV-ordbogen. All rights reserved.</p>
+            <p>Kilder:</p>
+            <ul>
+                <li>Ordbog over det Danske Sprog, VIII, Herre – Høhævl;</li>
+                <li><a href="https://ordnet.dk/ddo">Den Danske Ordbog</a></li>
+            </ul>
+            <em>
+                Mangler vi et ord?
+                <a
+                    href="mailto:hv.ordbogen@gmail.com?Subject=Manglende ord&Body=Ord:%0D%0AEndelse(r):%0D%0ABetydning:%0D%0AOrdklasse:"
+                    target="_top"
+                >
+                    Send det til os.
+                </a>
+            </em>
+        </footer>
+        <script src="https://unpkg.com/@rive-app/canvas"></script>
+        <script src="./app.js" type="module"></script>
+    </body>
+</html>
